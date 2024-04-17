@@ -1,15 +1,17 @@
 public class Student {
-    public String firstName;
-    public String lastName;
-    public int gradeLevel;
+    private String firstName;
+    private String lastName;
+    private int gradeLevel;
+    public static int totalStudents;
 
     public Student(String firstName, String lastName, int gradeLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gradeLevel = gradeLevel;
+        totalStudents++;
     }
 
-    public String ToString() {
+    public String toString() {
         return "Name: " + firstName + " " + lastName + ", Grade: " + gradeLevel;
     }
 }
