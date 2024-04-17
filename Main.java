@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        while(true) {
+    String repeat = "yes";
+
+        while(repeat.equalsIgnoreCase("yes")) {
             String firstName = System.console().readLine("Enter a student's first name: ");
             String lastName = System.console().readLine("Enter the student's last name: ");
             int gradeLevel;
@@ -18,14 +20,11 @@ public class Main {
             Student student = new Student(firstName, lastName, gradeLevel);
             System.out.println(student.toString());
 
-            String repeat = System.console().readLine("Would you like to continue adding students? ");
+            repeat = System.console().readLine("Would you like to continue adding students? ");
 
-            while(true) {
-                if(!repeat.equalsIgnoreCase("yes") ^ !repeat.equalsIgnoreCase("no")) break;
+            while(!(repeat.equalsIgnoreCase("yes") || repeat.equalsIgnoreCase("no"))) {
                 repeat = System.console().readLine("Invalid input, please try again: ");
             }
-
-            if (repeat.equalsIgnoreCase("no")) break;
         }
 
         System.out.println("Total Students: " + Student.totalStudents);
