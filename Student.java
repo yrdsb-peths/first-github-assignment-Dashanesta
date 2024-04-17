@@ -3,10 +3,10 @@ public class Student {
     public String lastName;
     public int gradeLevel;
 
-    public Student(String first, String last, int grade) {
-        firstName = first;
-        lastName = last;
-        gradeLevel = grade;
+    public Student(String firstName, String lastName, int gradeLevel) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gradeLevel = gradeLevel;
     }
 
     public String ToString() {
